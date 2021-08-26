@@ -7,7 +7,6 @@ export default {
           'Content-Type': 'multipart/form-data',
           Authorization: 'Bearer ' + token
         }
-        console.log('data type', typeof data) // displays "string"
         if (typeof data === 'string') {
           headers = {
             Authorization: 'Bearer ' + token

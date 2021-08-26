@@ -1,8 +1,8 @@
 {
-  "name": "truffle-vue",
-  "version": "0.2.0",
-  "description": "A vue.js truffle box",
-  "author": "osarrouy <olivier.sarrouy@gmail.com>",
+  "name": "feel-the-beat",
+  "version": "0.1.0",
+  "description": "Feel The Beat is game application lets anyone create unique digital beats music NFT cards, initialize music battle challenge, voting and get rewarded.",
+  "author": "kryptopoo@gmail.com",
   "private": true,
   "scripts": {
     "dev": "node scripts/dev-server.js",

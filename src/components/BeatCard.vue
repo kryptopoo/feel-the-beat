@@ -33,7 +33,7 @@ export default {
   methods: {
     vote: function () {
       const self = this
-      // console.log(`voting beatId: ${this.beatId} , battleId: ${this.voteBattleId}`)
+
       Battles.voteBeat(this.voteBattleId, this.beatId)
         .then((tx) => {
           console.log('voted', tx)

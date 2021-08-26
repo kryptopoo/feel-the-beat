@@ -24,9 +24,7 @@ const Battles = {
             })
         })
     },
-    createBattle: function (reward, name, description, startTime, endTime, imageFile, callback) {
-        console.log('createBattle imageFile', imageFile)
-        
+    createBattle: function (reward, name, description, startTime, endTime, imageFile, callback) {        
         let self = this
         const formData = new FormData()
         // ipfs image
@@ -38,7 +36,6 @@ const Battles = {
         let metadataFileName = 'metadata.json'
         formData.append('file', new Blob([JSON.stringify(metadata)], { type: 'application/json' }), metadataFileName)
         NftStorage.uploadNftStorage(formData, function (res) {
-            console.log('uploadNftStorage res', res)
           if (res.data.ok) {
             let ipfsUri = `https://${res.data.value.cid}.ipfs.dweb.link/`
             let ipftImage = 'https://' + res.data.value.cid + '.ipfs.dweb.link/' + imageFileName
@@ -66,7 +63,6 @@ const Battles = {
                 battleId,
                 { from: window.web3.eth.accounts[0] }
             ).then(tx => {
-
                 console.log('getBattle tx', JSON.stringify(tx))
 
                 let ipfsUri = tx[3]
@@ -86,9 +82,6 @@ const Battles = {
 
                     resolve(battleInfo)
                   })
-
-
-                
             }).catch(err => {
                 reject(err)
             })

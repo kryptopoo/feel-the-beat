@@ -28,46 +28,8 @@ export default {
       await this.loadBeats()
     })
 
-    // console.log('MyBeats my address', this.myAddress)
     await Beats.init()
     await this.loadBeats()
-
-    // Utils.getMyAddress(async (myAddress) => {
-    //   self.myAddress = myAddress
-
-    //   // get owner beatIds
-    //   let tokensRs = await Beats.getTokensOfOwner(self.myAddress)
-    //   tokensRs.forEach((tokenId) => {
-    //     self.beatIds.push(tokenId.toNumber())
-    //   })
-    // })
-
-    // Utils.getMyAddress((myAddress) => {
-    //   self.myAddress = myAddress
-
-    //   // get owner beatIds
-    //   Beats.getTokensOfOwner(self.myAddress)
-    //     .then((res) => {
-    //       res.forEach((tokenId) => {
-    //         self.beatIds.push(tokenId.toNumber())
-    //       })
-    //       console.log('beatIds', self.beatIds)
-    //       // get token Uris
-    //       self.beatIds.forEach((tokenId) => {
-    //         Beats.get(tokenId)
-    //           .then((tokenUri) => {
-    //             console.log('tokenUri', tokenUri)
-    //             self.tokenUris.push(tokenUri)
-    //           })
-    //           .catch((err) => {
-    //             console.log(err)
-    //           })
-    //       })
-    //     })
-    //     .catch((err) => {
-    //       console.log(err)
-    //     })
-    // })
   },
   methods: {
     loadBeats: function () {

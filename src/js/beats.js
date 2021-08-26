@@ -34,10 +34,6 @@ const Beats = {
   create: function (tokenUri) {
     let self = this
 
-    // window.web3.eth.enable()
-    console.log('self instance', self.instance)
-    console.log('window.web3.eth.defaultAccount', window.web3.eth.defaultAccount)
-    console.log('window.web3.eth.accounts[0]', window.web3.eth.accounts[0])
     return new Promise((resolve, reject) => {
       self.instance.createBeat(
         tokenUri,
@@ -84,7 +80,6 @@ const Beats = {
     })
   },
   getTokensOfOwner: function(addr) {
-    console.log('window.web3.eth.accounts[0]', window.web3.eth.accounts[0])
     let self = this
     return new Promise((resolve, reject) => {
       self.instance.tokensOfOwner(
@@ -98,9 +93,6 @@ const Beats = {
     })
   },
   mint: function (imageFile, audioFile, metadata, callback) {
-    console.log('mint imageFile', imageFile)
-    console.log('mint audioFile', audioFile)
-    
     let self = this
     const formData = new FormData()
     // ipfs image
